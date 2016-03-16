@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="SistemaCompletoASP.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <link href="Content/css/General.css" rel="stylesheet" />
+    <link href="Content/css/Banner.css" rel="stylesheet" />
+    <link href="Content/css/SessionBar.css" rel="stylesheet" />
+    <link href="Content/css/Menu.css" rel="stylesheet" />
+    <!-- LLAMADO DINAMICO PARA ARCHIVOS EXTERNOS JS Y CSS -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class="banner">
+            <h2>ESTE ES EL BANNER</h2>
+        </div>
+
+
+
+        <div class="sessionBar">
+            <table class="sessionTabla">
+                <tr>
+                    <td class="sessionUsuario">
+                        <strong>Bienvenido </strong><%Response.Write(Session["USER_NAME"]);%>                        
+                    </td>
+                    <td class="sessionLogOut">
+                        <asp:Button ID="btnLogOut" runat="server" Text="Salir" OnClick="btnLogOut_Click"  />                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <asp:Table ID="Table1" runat="server" CssClass="contenido">
+            <asp:TableRow>
+                <asp:TableCell CssClass="contenedorMenu">
+                    <h2>Menu</h2>
+                    <ul class="menu">
+                        <li>
+                           <a runat="server" href="~/">INICIO</a>
+                        </li>
+                        <li>
+                            <a href="">ADMINISTRACION</a>
+                                <ul>
+                                    <li>
+                                        <a runat="server" href="~/View/Usuarios.aspx">Usuarios</a>
+                                    </li>
+                                    <li>
+                                        <a id="goToMunicipios" href="/Administracion/Municipios">Municipios</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Submenu pendiente</a>
+                                            <ul>
+                                                <li><a href="">Opcion 1</a></li>
+                                            </ul>
+                                    </li>
+                                </ul>
+                         </li>
+                        <li>
+                            <a href="">UNIVERSIDAD</a>
+                                <ul>
+                                    <li>
+                                        <a id="goToEstudiantes" href="/Universidad/Estudiantes">Estudiantes</a>
+                                    </li>
+                                </ul>
+                        </li>
+
+                        <li>
+                            <a href="">Reportes</a>
+                                <ul>
+                                    <li>
+                                        <a id="goToReporte" href="/Reporte/Reporte1">Reporte #1</a>
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </asp:TableCell>
+
+
+                <asp:TableCell>
+                    <!-- LLAMADO DINAMICO PARA EL CONTENIDO -->
+                    <asp:ContentPlaceHolder ID="Content" runat="server">
+                    </asp:ContentPlaceHolder>
+                </asp:TableCell>
+            </asp:TableRow>
+
+        </asp:Table>
+
+    </form>
+</body>
+</html>
