@@ -18,13 +18,7 @@ namespace SistemaCompletoASP
         {
 
             obj = new LogInController();
-
-            
-            /*Si no se ha iniciado sesion, entonces se va a login*/
-            if (Session.Count == 0)
-            {                
-                Response.Redirect("View/LogIn.aspx");
-            }            
+     
         }
 
         protected void btnLogOut_Click(object sender, EventArgs e)

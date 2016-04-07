@@ -23,7 +23,7 @@ namespace SistemaCompletoASP
             /*Si no se ha iniciado sesion, entonces se va a login*/
             if (Session.Count > 0)
             {
-                Response.Redirect("../");
+                Response.Redirect("~");
             }
         }
 
@@ -43,7 +43,7 @@ namespace SistemaCompletoASP
             {
                 Session["USER_ID"] = a[1];
                 Session["USER_NAME"] = a[2];
-                Response.Redirect("../");
+                Response.Redirect("~");
             }
             else
             {

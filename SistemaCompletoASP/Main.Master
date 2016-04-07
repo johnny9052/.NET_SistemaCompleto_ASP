@@ -52,7 +52,7 @@
                                         <a runat="server" href="~/View/Usuarios.aspx">Usuarios</a>
                                     </li>
                                     <li>
-                                        <a id="goToMunicipios" href="/Administracion/Municipios">Municipios</a>
+                                        <a runat="server" href="~/View/Municipios.aspx">Municipios</a>
                                     </li>
                                     <li>
                                         <a href="">Submenu pendiente</a>

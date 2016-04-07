@@ -137,7 +137,8 @@
   <ItemGroup>
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="View\LogIn.aspx" />
+    <Content Include="LogIn.aspx" />
+    <Content Include="View\Municipios.aspx" />
     <Content Include="View\Usuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -151,6 +152,8 @@
     <Compile Include="Contracts\Security\ILoginService.cs" />
     <Compile Include="Contracts\Universidad\IEstudianteService.cs" />
     <Compile Include="Controllers\LogInController.cs" />
+    <Compile Include="Controllers\MunicipioController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,11 +171,11 @@
     <Compile Include="Helpers\GeneralData.cs" />
     <Compile Include="Helpers\SessionVerify.cs" />
     <Compile Include="Infraestructure\Connection.cs" />
-    <Compile Include="View\LogIn.aspx.cs">
+    <Compile Include="LogIn.aspx.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\LogIn.aspx.designer.cs">
+    <Compile Include="LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Services\Administracion\MunicipioService.cs" />
@@ -180,6 +183,13 @@
     <Compile Include="Services\Reporte\Reporte1Service.cs" />
     <Compile Include="Services\Security\LoginService.cs" />
     <Compile Include="Services\Universidad\EstudianteService.cs" />
+    <Compile Include="View\Municipios.aspx.cs">
+      <DependentUpon>Municipios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Municipios.aspx.designer.cs">
+      <DependentUpon>Municipios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,6 +211,7 @@
     <Folder Include="BackupDB\" />
     <Folder Include="Content\js\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Municipio\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
